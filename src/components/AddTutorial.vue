@@ -34,6 +34,7 @@
 
 				<v-card-actions>
 					<v-btn color="success" @click="newTutorial">Add</v-btn>
+					<v-btn color="success" :href="'/tutorials/'">View Tutorials</v-btn>
 				</v-card-actions>
 			</v-card>
 		</div>

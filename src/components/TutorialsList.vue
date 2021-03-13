@@ -5,7 +5,7 @@
 		</v-col>
 
 		<v-col col="12" md="4">
-			<v-btn small @click="searchTitle">
+			<v-btn medium @click="searchTitle">
 				Search
 			</v-btn>
 		</v-col>
@@ -20,13 +20,13 @@
 				 disable-pagination
 				 :hide-default-footer="true">
 					<template v-slot:[`item.actions`]="{ item }">
-						<v-icon small class="mr-2" @click="editTutorial(item.id)">mdi-pencil</v-icon>
-						<v-icon small @click="deleteTutorial(item.id)">mdi-delete</v-icon>						
+						<v-icon medium class="mx-2" fab dark color="cyan" @click="editTutorial(item.id)">mdi-pencil</v-icon>
+						<v-icon medium color="error" @click="deleteTutorial(item.id)">mdi-delete</v-icon>						
 					</template>
 				</v-data-table>
 
 				<v-card-actions v-if="tutorials.length > 0">
-					<v-btn small color="error" @click="removeTutorials">
+					<v-btn medium color="error" @click="removeTutorials">
 						Remove All
 					</v-btn>
 				</v-card-actions>
@@ -91,7 +91,7 @@
 					});
 			},
 
-			editTutorials(id) {
+			editTutorial(id) {
 				this.$router.push({ name: "tutorial-details", params: { id: id } });
 			},
 
